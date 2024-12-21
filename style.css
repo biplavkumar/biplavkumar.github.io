@@ -10,7 +10,7 @@
     background-position: center;
     background-size: cover;
     height: 109vh;
-    background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(./Images/farm.jpg)
+    background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(./Images/foxnut_bowl.png)
 }
 
 .navbar{
