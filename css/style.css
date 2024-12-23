@@ -40,6 +40,7 @@ ol {
     --text-color: #555;
     --text-grey: #999;
     --black-color: #000;
+    --light-green: #a0f5c5;
     --primary-font: 'Roboto', sans-serif;
     --secondary-font: 'Quicksand', sans-serif;
     ;
@@ -117,6 +118,7 @@ p {
     font-weight: 400;
     line-height: 1.75rem;
     letter-spacing: 1px;
+    text-align: justify;
 }
 
 .main-btn {
