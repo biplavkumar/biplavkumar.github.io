@@ -1,48 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Foxnut Export</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="main">
-            <div class="navbar">
-                <img class="company-logo" src="./Images/Subject.png">
-                <div class="icon">
-                    <h2 class="logo">Farms Natural</h2>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Farms Natural Website" content="Farms Natural Website">
+    <title>Farms Natural</title>
 
-                <div class="menu">
-                    <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">SERVICE</a></li>
-                        <li><a href="#">CONTACT US</a></li>
-                    </ul>
-                </div>
+    <!-- bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Own CSS  -->
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/responsive-style.css">
+</head>
+
+<body>
+    <!-- header design -->
+     <header>
+        <nav class="navbar navbar-expand-lg navigation-wrap">
+            <div class="container">
+              <a class="navbar-brand" href="#"><img src="./Images/Subject.png"><div class="brand-name">Farms Natural</div></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" 
+              aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-stream navbar-toggler-icon"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#reviews">Reviews</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#faqs">FAQs</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contactus">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            
-            <div class="banner">
-                <div class="app-text">
-                <h1>Welcome to Farms Natural</h1>
-                <p>At Farm Fresh, we specialize in delivering premium-quality farm-fresh products<br>
-                   directly to your business doorstep. From the fertile lands where our produce<br>
-                   is carefully grown to the moment it reaches your hands, we ensure every step<br>
-                   of the journey upholds the highest standards of quality, sustainability, and reliability.<br>
-                   <br>
+          </nav>
+     </header>
 
-                   With a seamless supply chain, rigorous quality checks, and a commitment to<br>
-                   supporting local farmers, we take pride in bridging the gap between farms<br>
-                   and businesses worldwide. Whether you’re in the food, retail, or hospitality industry,<br>
-                   our export solutions are tailored to meet your unique needs.<br><br>
+     <!-- Section-1 top banner -->
+      <section id="home">
+        <div class="container-fluid px-0 top-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6">
+                        <h1>
+                            Welcome to Farms Natural
+                        </h1>
+                        <p>
+                            At Farms Natural, we are specialized in delivering premium-quality fresh “Foxnuts” (Makhana)
+                            directly to your doorstep. We care to bring from the fertile lands where our produce
+                            is carefully grown organically with high nutritive value till it reaches your hands, 
+                            we ensure every step of the journey upholds the highest standards of quality, sustainability, and reliability.<br><br>
+                            
+                            With a seamless supply chain, rigorous quality checks, and a commitment to
+                            supporting local farmers, we take pride in bridging the gap between farms
+                            and businesses worldwide. Whether you’re in the food, retail, hospitality or any other industry,
+                            our export solutions are tailored to meet your unique needs.<br><br>
 
-                   Choose Farm Fresh for freshness, trust, and excellence—exporting nature’s best<br>
-                   from farm to your business.
+                            Choose Farm Naturals for freshness, nutritive value, organically grown, quality texted and 
+                            excellence in size which makes it demanding for export to many countries. The domestic demand 
+                            on the other hand is all time rise as well.
 
-                </p>
+<!--                             Farms Natural offers wide range of “Foxnuts” (Makhana) products right from plane raw variant to roasted or even flavoured/caramelized. We offer this super food at best of its size variants from 9 mm to 30 mm roughly, depending on the requirements from domestic consumption to international exports. -->
+                        </p>
+                        
+                        <div class="mt-4">
+                            <button class="main-btn"> Explore More <i class="fas fa-angle-right ps-3"></i></button>
+                            <!-- <button class="white-btn ms-lg-4 mt-lg-0 mt-4"> Explore More <i class="fas fa-angle-right ps-3"></i></button> -->
+                        </div>
+                        
+                    </div>
+                    <img src="./Images/foxnut_bowl.png">
                 </div>
             </div>
         </div>
-    </body>
+      </section>
+
+     <!-- Section-2 counter -->
+      <section id="counter">
+        <section class="counter-section">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-3 mb-lg-0 mb-md-0 mb-5">
+                        <h2>
+                            <span id="count1"></span>+
+                        </h2>
+                        <p>SAVINGS</p>
+                    </div>
+                    <div class="col-md-3 mb-lg-0 mb-md-0 mb-5">
+                        <h2>
+                            <span id="count2"></span>+
+                        </h2>
+                        <p>PHOTOS</p>
+                    </div>
+                    <div class="col-md-3 mb-lg-0 mb-md-0 mb-5">
+                        <h2>
+                            <span id="count3"></span>+
+                        </h2>
+                        <p>CLIENTS</p>
+                    </div>
+                    <div class="col-md-3 mb-lg-0 mb-md-0 mb-5">
+                        <h2>
+                            <span id="count4"></span>+
+                        </h2>
+                        <p>LOCATIONS</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </section>
+
+     <!-- Section-3 About -->
+
+     <!-- Section-4 Story -->
+
+     <!-- Section-5 explore services -->
+
+     <!-- Section-6 testimonials -->
+
+     <!-- Section-7 faqs -->
+
+     <!-- Section-8 News Letter -->
+
+
+    <!-- JS Library -->
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+     <!-- Own JS  -->
+      <script src="js/main.js"></script>
+</body>
 </html>

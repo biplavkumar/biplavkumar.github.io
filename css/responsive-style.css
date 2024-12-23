@@ -1,0 +1,22 @@
+@media (max-width:1024px){
+
+    /* About Section */
+}
+
+@media (max-width:991px){
+
+    /* Custom Class */
+    .text-content{
+        width: 100%;
+    }
+
+    /* Nav Brand */
+    .navigation-wrap .navbar-brand img{
+        height: 3.8125rem;
+    }
+
+    .navigation-wrap {
+        text-align: center;
+    }
+}
+
