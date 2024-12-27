@@ -1,92 +1,85 @@
-@media (max-width:1024px) {
+@media (max-width:1024px){
 
-    /* about section */
-    
+    /* About Section */
 }
 
-@media (max-width: 991px) {
+@media (max-width:991px){
 
-    /*custom classes  */
+    /* Custom Class */
     .text-content{
-        width:100%;
+        width: 100%;
     }
-     
 
-    /* navbar brand */
+    /* Nav Brand */
     .navigation-wrap .navbar-brand img{
-        height:3.8125rem;
+        height: 3.8125rem;
     }
-    .navigation-wrap{
+
+    .navigation-wrap {
         text-align: center;
         background-color: var(--white-color);
     }
-    .navigation-wrap .nav-link{
+
+    .navigation-wrap .nav-link {
         line-height: 1.875rem;
     }
-    /* Banner Design */
-    .top-banner{
-        padding:9.375rem 0 9.375rem;
+
+    /* banner design */
+    .top-banner {
+        padding: 9.375rem 0 9.375rem;
     }
 
-    /* carousel design */
+    /* Carousel design */
     .news-section .carousel-item .carousel-caption p{
-        padding:0;
+        padding: 0;
     }
-     
 }
 
-@media (max-width: 767px) {
+@media (max-width:767px){
 
     /* custom css */
-    h1{
-        font-size:2.8rem;
+    h1 {
+        font-size: 2.8rem;
     }
-    h2{
-        font-size:2rem;
+    h2 {
+        font-size: 2rem;
         line-height: 2.0625rem;
     }
-     
 
     /* top banner */
-    .top-banner{
-        padding:10.875rem 0 9.375rem;
-    }
-    
-
-    /* story section */
-    .story-section{
-        height:auto;
-        padding:3rem 0;
-    }
-    
-
-    /* carousel design */
-    .news-section .carousel-item{
-        padding:11rem 3.125rem;
+    .top-banner {
+        padding: 10.875rem 0 9.375rem;
     }
 
-    /* newslettar */
-    .newsletter{
-        width:75%;
-    }
-    .newsletter .main-btn{
-        width:100%;
-        margin-top:1rem;
+    /* newsletter */
+    .newsletter {
+        width: 75%;
     }
 
-    /* footer link */
+    .newsletter .main-btn {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    /* footer  */
     .footer .footer-link,
-    .footer a i{
-        padding:0 0.7rem;
+    .footer a i {
+        padding: 0 0.7rem
     }
-     
+
+    /* Carousel Design */
+
+    .news-section .carousel-item {
+        padding: 11rem 3.125rem;
+    }
 }
 
-@media (max-width:330px) {
+@media (max-width:330px){
 
-    /* carousel design */
-    .news-section .carousel-item{
-        padding:13rem 3.125rem;
+    /* Carousel Design */
+    .news-section .carousel-item {
+        padding: 1rem 3.125rem;
     }
-     
+
 }
+
