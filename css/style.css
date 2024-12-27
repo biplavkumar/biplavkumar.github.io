@@ -94,7 +94,7 @@ h2 {
     line-height: 3rem;
 }
 
-h4 {
+h3 {
     color: var(--secondary-color);
     font-family: var(--secondary-font);
     text-transform: capitalize;
@@ -107,8 +107,8 @@ h4 {
     color: var(--primary-color);
     text-transform: capitalize;
     font-family: var(--secondary-font);
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 1000;
     margin-bottom: 0.5rem;
 }
 
@@ -257,14 +257,6 @@ p {
 ================================================= 
 */
 
-/* .top-banner {
-    width:100%;
-    background: url('../Images/foxnut_bowl.png') no-repeat center;
-    background-size: 550px;
-    background-position: 45rem;
-    padding: 7.875rem 0 9.375rem;
-} */
-
 .top-banner {
     width:100%;
     padding: 7rem 0 9.375rem;
@@ -294,4 +286,59 @@ p {
 .counter-section p {
     color: var(--white-color);
     text-transform: uppercase;
+}
+
+/* 
+=================================================
+    About Section Design
+================================================= 
+*/
+
+.about-section {
+    background: var(--white-color);
+}
+
+
+.about-section .card img{
+    border-radius: 2rem;
+    box-shadow: 0 0.125rem 1.75rem 0 rgb(0,0,0,0.5);
+    display: inline-block;
+    max-height: 450px;
+    width: auto;
+    margin-left: 3rem;
+}
+
+.about-section .text-sec{
+    padding-left: 2rem;
+}
+
+/* 
+=================================================
+    Food Type Section Design
+================================================= 
+*/
+
+.about-sec {
+    padding-top: 0.25rem;
+}
+
+.about-sec ul li{
+    font-size:  1rem;
+    color: var(--text-color);
+    line-height: 32px;
+    position: relative;
+    margin-left: 30px;
+}
+
+.about-sec ul li::before{
+    position: absolute;
+    left: -2.1875rem;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-family: "Font Awesome 5 Free";
+    content: '\f00c';
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
 }
