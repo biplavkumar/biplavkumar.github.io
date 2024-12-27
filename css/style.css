@@ -42,6 +42,7 @@ ol {
     --black-color: #000;
     --light-green: #a0f5c5;
     --parallax-color: #99af81;
+    --wheat-color: rgb(241, 240, 231);
     --primary-font: 'Roboto', sans-serif;
     --secondary-font: 'Quicksand', sans-serif;
     ;
@@ -390,9 +391,10 @@ p {
 .news-section .carousel-item {
     margin-top: 3rem;
     padding: 10rem 3.125rem;
-    background-color: var(--white-color);
+    background-color: var(--wheat-color);
     border-radius: 0.9375rem;
-    text-align: center;
+    text-align: left;
+    max-width: 200rem;
 }
 
 .news-section .carousel-caption img{
