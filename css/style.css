@@ -298,14 +298,20 @@ p {
     background: var(--white-color);
 }
 
+.about-section .card{
+    border: none;
+    background-color: transparent;
+    border-radius: 2rem;
+}
+
 
 .about-section .card img{
-    border-radius: 2rem;
+    border-radius: 4rem;
     box-shadow: 0 0.125rem 1.75rem 0 rgb(0,0,0,0.5);
     display: inline-block;
-    /* max-height: 450px; */
+    max-height: 450px;
     width: auto;
-    padding: 0.2rem;
+    padding: 0.13rem;
     margin-left: 2.5rem;
     margin-right: 1rem;
     object-fit: contain;
@@ -314,12 +320,6 @@ p {
 .about-section .text-sec{
     padding-left: 2rem;
 }
-
-/* 
-=================================================
-    Food Type Section Design
-================================================= 
-*/
 
 .about-sec {
     padding-top: 0.25rem;
@@ -344,4 +344,35 @@ p {
     padding-right: 3px;
     vertical-align: middle;
     font-weight: 900;
+}
+
+/* 
+=================================================
+    Products Section Design
+================================================= 
+*/
+
+.products .card{
+    border: none;
+    background-color: transparent;
+    border-radius: 0.9375rem;
+}
+
+.products .card img{
+    border-radius: 0.9375rem;
+    object-fit: cover;
+}
+
+.products .card span{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    padding-bottom: 1rem;
+    border-bottom: 0.0625rem solid #eee;
+}
+
+.products .card span del{
+    color: var(--text-color);
+    margin-left: 0.5rem;
 }
