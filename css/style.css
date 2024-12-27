@@ -41,7 +41,7 @@ ol {
     --text-grey: #999;
     --black-color: #000;
     --light-green: #a0f5c5;
-    --parallax-color: #214607;
+    --parallax-color: #99af81;
     --primary-font: 'Roboto', sans-serif;
     --secondary-font: 'Quicksand', sans-serif;
     ;
@@ -178,7 +178,7 @@ p {
 }
 
 .counter-section h2,
-.testimonial-section h2,
+.news-section h2,
 .book-food-text h2{
     color: var(--white-color);
 }
@@ -280,7 +280,7 @@ p {
 */
 
 .counter-section {
-    background-color: var(--primary-color);
+    background-color: var(--parallax-color);
     padding: 2.5rem 0;
 }
 
@@ -380,6 +380,50 @@ p {
 
 /* 
 =================================================
+    News and Announcement Section Design
+================================================= 
+*/
+.news-section {
+    background-color: var(--primary-color);
+}
+
+.news-section .carousel-item {
+    margin-top: 3rem;
+    padding: 10rem 3.125rem;
+    background-color: var(--white-color);
+    border-radius: 0.9375rem;
+    text-align: center;
+}
+
+.news-section .carousel-caption img{
+    max-width:10rem;
+    border-radius: 10%;
+    padding:0.2125rem;
+}
+  
+.news-section .carousel-item .carousel-caption p{
+    font-size: 1.3125rem;
+    line-height: 2.0625rem;
+    padding:0 11% 0.625rem;
+}
+.news-section .carousel-indicators{
+    bottom:-2.8125rem;
+}
+.news-section .carousel-indicators button{
+    width:15px;
+    height:15px;
+    outline:none;
+    border-radius: 50%;
+    border:none;
+    margin-right:1rem;
+    opacity:0.2;
+}
+.news-section .carousel-indicators button.active{
+    opacity:1;
+}
+
+/* 
+=================================================
     FAQs Section Design
 ================================================= 
 */
@@ -392,7 +436,7 @@ p {
 
 .parallex {
     width: 100%;
-    background: linear-gradient(rgba(255,255,255,.45), rgba(255,255,255,.45)), url(../Images/foxnut_Full.png)  no-repeat center;
+    background: linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6)), url(../Images/foxnut_Full.png)  no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     background-position: 0 71.9125px;
@@ -400,6 +444,68 @@ p {
 }
 
 .parallex h2{
-    color: var(--parallax-color);
+    color: var(--primary-color);
     font-family: cursive;
+}
+
+/* Form Control */
+.newsletter{
+    width: 55%;
+    margin: 0 auto;
+}
+
+.newsletter .form-control{
+    height: 3.225rem;
+    padding: 0 1.25rem;
+    font-size: 0.875rem;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    border: 0.1875rem solid var(--text-grey);
+    color: var(--black-color);
+    font-weight: 700;
+    margin-left: 1rem;
+}
+
+.newsletter .form-control:hover,
+.newsletter .form-control:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+.newsletter h2{
+    width: 50rem;
+}
+
+.newsletter p{
+    padding-left: 3rem;
+}
+
+/* 
+=================================================
+    Footer Section Design
+================================================= 
+*/
+
+.footer {
+    background: var(--primary-color);
+}
+
+.footer .footer-link {
+    font-size: 1rem;
+    color: var(--white-color);
+    padding: 0 1.875rem;
+}
+
+.footer .footer-link:hover{
+    color: var(--white-color) !important;
+
+}
+
+.footer a i {
+    font-size: 1.5rem;
+    color: var(--white-color);
+    padding: 0 1rem;
 }
