@@ -41,6 +41,7 @@ ol {
     --text-grey: #999;
     --black-color: #000;
     --light-green: #a0f5c5;
+    --parallax-color: #214607;
     --primary-font: 'Roboto', sans-serif;
     --secondary-font: 'Quicksand', sans-serif;
     ;
@@ -178,7 +179,7 @@ p {
 
 .counter-section h2,
 .testimonial-section h2,
-.book-food-text h2 {
+.book-food-text h2{
     color: var(--white-color);
 }
 
@@ -375,4 +376,30 @@ p {
 .products .card span del{
     color: var(--text-color);
     margin-left: 0.5rem;
+}
+
+/* 
+=================================================
+    FAQs Section Design
+================================================= 
+*/
+
+.faqs h4 span {
+    color: var(--primary-color);
+    font-size: 1.875rem;
+    margin-right: 0.3125rem;
+}
+
+.parallex {
+    width: 100%;
+    background: linear-gradient(rgba(255,255,255,.45), rgba(255,255,255,.45)), url(../Images/foxnut_Full.png)  no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0 71.9125px;
+    padding: 4.37rem 0;
+}
+
+.parallex h2{
+    color: var(--parallax-color);
+    font-family: cursive;
 }
