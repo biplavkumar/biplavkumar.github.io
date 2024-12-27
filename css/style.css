@@ -262,15 +262,15 @@ p {
     padding: 7rem 0 9.375rem;
 }
 
-.top-banner .container .row img {
+/* .top-banner .container .card img {
     max-height: 350px;
-    width: auto;
+    width: 500px;
     display: inline-block;
     margin-top: 6.8rem;
-    margin-left: 4rem;
+    margin-left: 1rem;
     box-shadow: 0 0.125rem 1.75rem 0 rgb(0,0,0,0.5);
     border-radius: 75px;
-}
+} */
 
 /* 
 =================================================
@@ -303,9 +303,12 @@ p {
     border-radius: 2rem;
     box-shadow: 0 0.125rem 1.75rem 0 rgb(0,0,0,0.5);
     display: inline-block;
-    max-height: 450px;
+    /* max-height: 450px; */
     width: auto;
-    margin-right:6rem;
+    padding: 0.2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    object-fit: contain;
 }
 
 .about-section .text-sec{
