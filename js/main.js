@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         step = Math.abs(Math.floor(duration / range)),
         timer = setInterval(() => {
             current += increment;
-            obj.textContent = current;
+            //obj.textContent = 55;
             if(current == end){
                 clearInterval(timer);
             }
@@ -38,4 +38,97 @@ document.addEventListener("DOMContentLoaded", () => {
     counter("count2", 300, 2287, 20);
     counter("count3", 0, 287, 3900);
     counter("count4", 0, 1, 30);
+})
+
+// Logic for email sending using JS 
+const form = document.querySelector('form');
+
+const fullName = document.getElementById("name");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const subject = document.getElementById("subject");
+const mess = document.getElementById("message");
+
+function sendEmail() {
+    Email.send({
+        Host : "smtp.mailendo.com",
+        Username : "username",
+        Password : "password",
+        To : 'them@website.com',
+        From : "you@isp.com",
+        Subject : "This is the subject",
+        Body : "And this is the body"
+    }).then(
+      message => {
+        Swal.fire({
+            title: "Message Sent !",
+            text: "We will reach back to you in 2-3 business days",
+            icon: "success",
+            timer: 3000
+          });
+      }
+    );
+}
+
+function checkInputs() {
+    const items = document.querySelectorAll(".item");
+
+    for (const item of items){
+        if (item.value == ""){
+            item.classList.add("error");
+            item.parentElement.classList.add("error");
+        }
+
+        if(items[1].value != ""){
+            checkEmail();
+        }
+
+        items[1].addEventListener("keyup", () => {
+            checkEmail();
+        })
+
+        item.addEventListener("keyup", () => {
+            if(item.value != ""){
+                item.classList.remove("error");
+                item.parentElement.classList.remove("error");
+            }else {
+                item.classList.add("error");
+                item.parentElement.classList.add("error");
+            }
+        });
+    }
+}
+
+function checkEmail() {
+    const emailRegex =  /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
+    const errorTextEmail = document.querySelector(".error-text.email")
+
+    if (!email.value.match(emailRegex)){
+        email.classList.add("error");
+        email.parentElement.classList.add("error");
+
+        if (email.value != ""){
+            errorTextEmail.innerText = "Enter a valid email address";
+        } else {
+            errorTextEmail.innerText = "Email Address can't be blank";
+        }
+    } else {
+        email.classList.remove("error");
+        email.parentElement.classList.remove("error");
+    }
+}
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    checkInputs();
+
+    if(!fullName.classList.contains("error") && !email.classList.contains("error") &&  
+    !phone.classList.contains("error") && !subject.classList.contains("error") && 
+    !mess.classList.contains("error")){
+        console.log("OK");
+        sendEmail();
+
+        form.reset();
+        return false;
+    }
 })

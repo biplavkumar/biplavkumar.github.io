@@ -9,6 +9,13 @@
     padding: 0;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 :active,
 :hover,
 :focus {
@@ -43,6 +50,7 @@ ol {
     --light-green: #a0f5c5;
     --parallax-color: #99af81;
     --wheat-color: rgb(241, 240, 231);
+    --red-color: #f20707;
     --primary-font: 'Roboto', sans-serif;
     --secondary-font: 'Quicksand', sans-serif;
     ;
@@ -384,8 +392,9 @@ p {
     News and Announcement Section Design
 ================================================= 
 */
-.news-section {
+/* .news-section {
     background-color: var(--primary-color);
+    max-height: 6rem;
 }
 
 .news-section .carousel-item {
@@ -422,6 +431,49 @@ p {
 }
 .news-section .carousel-indicators button.active{
     opacity:1;
+} */
+
+.news-section .carousel-item {
+    height : 50vh;
+    min-height: 300px;
+    background: no-repeat scroll center scroll;
+    background-size: cover;
+}
+
+.news-section h1{
+    text-align: center;
+    padding-top: 1.2rem;
+}
+
+.news-section .carousel-item::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--black-color);
+    opacity: 0.4;
+}
+
+.news-section .carousel-caption {
+    bottom: 80px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.news-section .carousel-caption h5{
+    font-size: 40px;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+.news-section .carousel-caption p{
+    font-size: 17px;
+    font-weight: 70;
+    color: var(--wheat-color);
+    text-align: center;
 }
 
 /* 
@@ -511,3 +563,116 @@ p {
     color: var(--white-color);
     padding: 0 1rem;
 }
+
+/* 
+=================================================
+    Contact Us Page Design
+================================================= 
+*/
+
+.wrapper-contact {
+    padding-top: 8.25rem;
+}
+
+.contact-section {
+    background: #022b17;
+    /* background: linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.0)), url(../Images/foxnut_click_pan_1.jpeg)  no-repeat center;
+    background-size: cover; */
+}
+
+.contact-section .con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding-top: 3rem;
+}
+
+.contact-section h2{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--white-color);
+}
+
+.contact-section .contact-details h6 {
+    color: var(--white-color);
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 3rem;
+}
+
+.contact-section .con form{
+    width: 600px;
+    text-align: center;
+}
+
+form .input-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-box .input-field {
+    width : 48.5%;
+}
+
+.field .item {
+    width: 100%;
+    padding: 18px;
+    background: transparent;
+    border: 2px solid var(--light-green);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #ededed;
+    margin: 12px 0;
+}
+
+.field.error .item {
+    border-color: var(--third-color);
+}
+
+.field .item::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.field .error-text {
+    font-size: 14.5px;
+    color: var(--third-color);
+    text-align: left;
+    margin : -5px 0 10px;
+    display: none;
+}
+
+.field.error .error-text {
+    display: block;
+}
+
+form .textarea-field .item {
+    resize: none;
+}
+
+form .textarea-field .error-text {
+    margin-top: -10px;
+}
+
+form button {
+    padding: 12px 32px;
+    background: var(--parallax-color);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px var(--parallax-color);
+    font-size: 16px;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+form button:hover {
+    box-shadow: none;
+}
+
