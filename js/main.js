@@ -162,8 +162,7 @@ const scriptURLOrder = 'https://script.google.com/macros/s/AKfycbyoMQyIbepG5vMlj
 
 
 orderForm.addEventListener("click", e => {
-    e.preventDefault();
-    //checkInputs();
+checkInputs();
 
 // Code for prompt: 
     if(!fullName.classList.contains("error") && !email.classList.contains("error") &&  
@@ -179,7 +178,7 @@ orderForm.addEventListener("click", e => {
      
      fetch(scriptURLOrder, { method: 'POST', body: new FormData(orderQuery)})
      .then(response => "SUCCESS")
-     .then(() => { window.location.reload(); })
+     .then(() => {  })
      .catch(error => console.error('Error!', error.message))
 
      
@@ -204,7 +203,8 @@ function placeOrder() {
           Swal.fire({
             title: "Order Placed Successfully",
             text: "You will receive order confirmation",
-            icon: "success"
+            icon: "success",
+            confirmButtonColor: '#0a673a',
           });
         }
       });
