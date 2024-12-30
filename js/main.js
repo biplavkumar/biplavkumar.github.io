@@ -64,7 +64,8 @@ function sendEmail() {
             title: "Message Sent !",
             text: "We will reach back to you in 2-3 business days",
             icon: "success",
-            timer: 3000
+            confirmButtonColor: '#0a673a',
+            timer: 4000
           });
       }
     );
