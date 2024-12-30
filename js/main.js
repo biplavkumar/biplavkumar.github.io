@@ -1,13 +1,13 @@
 // active navbar
-let nav=document.querySelector(".navigation-wrap");
-window.onscroll = function (){
-    if(document.documentElement.scrollTop > 20){
-        nav.classList.add("scroll-on");
-    }else{
-        nav.classList.remove("scroll-on");
-    }
+// let nav=document.querySelector(".navigation-wrap");
+// window.onscroll = function (){
+//     if(document.documentElement.scrollTop > 20){
+//         nav.classList.add("scroll-on");
+//     }else{
+//         nav.classList.remove("scroll-on");
+//     }
 
-}
+// }
 
 // nav hide
 let navbar = document.querySelectorAll('.nav-link');
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
         step = Math.abs(Math.floor(duration / range)),
         timer = setInterval(() => {
             current += increment;
-            obj.textContent = current;
+            //obj.textContent = current;
             if(current == end){
                 clearInterval(timer);
             }
@@ -119,17 +119,38 @@ function checkEmail() {
     }
 }
 
-form.addEventListener("submit", (e) => {
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyoMQyIbepG5vMljxfNoFNRucDXPdIT0JvPpviHMpD0QMdfJtfI7THkWc92IrbAwdkL/exec';
+
+const formQuery = document.forms['contact-form'];
+
+form.addEventListener("submit", e => {
     e.preventDefault();
     checkInputs();
 
+// Code for prompt: 
     if(!fullName.classList.contains("error") && !email.classList.contains("error") &&  
     !phone.classList.contains("error") && !subject.classList.contains("error") && 
     !mess.classList.contains("error")){
-        console.log("OK");
-        sendEmail();
+    console.log("OK");
 
-        form.reset();
-        return false;
+     // Adding Query data to Google doc 
+     console.log("Trying to send data");
+    
+    
+     e.preventDefault()
+     
+     fetch(scriptURL, { method: 'POST', body: new FormData(formQuery)})
+     .then(response => "SUCCESS")
+     .then(() => { window.location.reload(); })
+     .catch(error => console.error('Error!', error.message))
+
+     
+    sendEmail();
+
+    form.reset();
+    return false;
     }
 })
+
+
