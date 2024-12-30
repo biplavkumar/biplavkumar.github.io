@@ -89,8 +89,8 @@ body {
 */
 
 h1 {
-    font-size: 2.2rem;
-    font-weight: 900;
+    font-size: 2rem;
+    font-weight: 700;
     margin-bottom: 1rem;
     margin-top: 2rem;
     color: var(--secondary-color);
@@ -98,7 +98,7 @@ h1 {
 
 h2 {
     font-weight: 700;
-    font-size: 2.25rem;
+    font-size: 1.9rem;
     text-transform: capitalize;
     font-family: var(--secondary-color);
     line-height: 3rem;
@@ -177,8 +177,8 @@ p {
 }
 
 .wrapper {
-    padding-top: 8.25rem;
-    padding-bottom: 8.25rem;
+    padding-top: 7rem;
+    padding-bottom: 3rem;
 }
 
 .text-content {
@@ -187,7 +187,6 @@ p {
 }
 
 .counter-section h2,
-.news-section h2,
 .book-food-text h2{
     color: var(--white-color);
 }
@@ -271,16 +270,6 @@ p {
     width:100%;
     padding: 7rem 0 9.375rem;
 }
-
-/* .top-banner .container .card img {
-    max-height: 350px;
-    width: 500px;
-    display: inline-block;
-    margin-top: 6.8rem;
-    margin-left: 1rem;
-    box-shadow: 0 0.125rem 1.75rem 0 rgb(0,0,0,0.5);
-    border-radius: 75px;
-} */
 
 /* 
 =================================================
@@ -387,9 +376,25 @@ p {
     margin-left: 0.5rem;
 }
 
+/* 
+=================================================
+    News & Announcement Section Design
+================================================= 
+*/
+
+.news-section h2{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--black-color);
+}
+
 .news-section .carousel-item {
-    height : 50vh;
-    min-height: 300px;
+    /* height : 60vh; */
+    padding: 0;
+    margin-top: 0.5rem;
+    max-height: 420px;
+    width : 100%;
     background: no-repeat scroll center scroll;
     background-size: cover;
 }
@@ -444,16 +449,23 @@ p {
 
 .parallex {
     width: 100%;
-    background: linear-gradient(rgba(255,255,255,.6), rgba(255,255,255,.6)), url(../Images/foxnut_Full.png)  no-repeat center;
+    background: linear-gradient(rgba(11, 32, 3, 0.7), rgba(195, 215, 201, 0.3)), url(../Images/foxnut_click_pan_parallax.jpeg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     background-position: 0 71.9125px;
     padding: 4.37rem 0;
 }
 
+/* .parallex .parallex-text{
+    
+} */
+
 .parallex h2{
     color: var(--primary-color);
     font-family: cursive;
+    background: white;
+    background-blend-mode: overlay;
+    border-radius: 90px;
 }
 
 /* Form Control */
@@ -525,7 +537,7 @@ p {
 */
 
 .wrapper-contact {
-    padding-top: 8.25rem;
+    padding-top: 7.25rem;
 }
 
 .contact-section {
@@ -538,14 +550,13 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 60vh;
-    padding-top: 3rem;
+    min-height: 40vh;
+    padding-top: 0.0525rem;
 }
 
 .contact-section h2{
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
-    margin-bottom: 10px;
     color: var(--white-color);
 }
 
@@ -558,7 +569,7 @@ p {
 }
 
 .contact-section .con form{
-    width: 600px;
+    width: 650px;
     text-align: center;
 }
 
@@ -568,19 +579,19 @@ form .input-box {
 }
 
 .input-box .input-field {
-    width : 48.5%;
+    width : 49%;
 }
 
 .field .item {
     width: 100%;
-    padding: 18px;
+    padding: 10px;
     background: transparent;
     border: 2px solid var(--light-green);
     outline: none;
     border-radius: 6px;
     font-size: 16px;
     color: #ededed;
-    margin: 12px 0;
+    margin: 8px 0;
 }
 
 .field.error .item {
@@ -603,9 +614,9 @@ form .input-box {
     display: block;
 }
 
-form .textarea-field .item {
+/* form .textarea-field .item {
     resize: none;
-}
+} */
 
 form .textarea-field .error-text {
     margin-top: -10px;
@@ -623,7 +634,7 @@ form button {
     letter-spacing: 1px;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 form button:hover {
@@ -641,8 +652,8 @@ form button:hover {
     justify-content: center;
     align-items: center;
     min-width: 600px;
-    margin-left: 10rem;
-    padding-top: 2rem;
+    margin-left: 5rem;
+    padding-top: 0.625rem;
 }
 
 .contact-section .contact-info h4{
@@ -660,6 +671,6 @@ form button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 27px;
-    margin-top: 2rem;
+    font-size: 24px;
+    margin-top: 0.01rem;
 }
