@@ -1,13 +1,13 @@
 // active navbar
-// let nav=document.querySelector(".navigation-wrap");
-// window.onscroll = function (){
-//     if(document.documentElement.scrollTop > 20){
-//         nav.classList.add("scroll-on");
-//     }else{
-//         nav.classList.remove("scroll-on");
-//     }
+let nav=document.querySelector(".navigation-wrap");
+window.onscroll = function (){
+    if(document.documentElement.scrollTop > 20){
+        nav.classList.add("scroll-on");
+    }else{
+        nav.classList.remove("scroll-on");
+    }
 
-// }
+}
 
 // nav hide
 let navbar = document.querySelectorAll('.nav-link');
@@ -153,4 +153,60 @@ form.addEventListener("submit", e => {
     }
 })
 
+
+// Placing order
+
+const orderForm = document.getElementById("order");
+const orderQuery = document.forms['order-form'];
+const scriptURLOrder = 'https://script.google.com/macros/s/AKfycbyoMQyIbepG5vMljxfNoFNRucDXPdIT0JvPpviHMpD0QMdfJtfI7THkWc92IrbAwdkL/exec';
+
+
+orderForm.addEventListener("click", e => {
+    e.preventDefault();
+    //checkInputs();
+
+// Code for prompt: 
+    if(!fullName.classList.contains("error") && !email.classList.contains("error") &&  
+    !phone.classList.contains("error") && !subject.classList.contains("error") && 
+    !mess.classList.contains("error")){
+    console.log("OK");
+
+     // Adding Query data to Google doc 
+     console.log("Trying to send ORDER data");
+    
+    
+     e.preventDefault()
+     
+     fetch(scriptURLOrder, { method: 'POST', body: new FormData(orderQuery)})
+     .then(response => "SUCCESS")
+     .then(() => { window.location.reload(); })
+     .catch(error => console.error('Error!', error.message))
+
+     
+     placeOrder();
+
+     //orderForm.reset();
+    return false;
+    }
+})
+
+function placeOrder() {
+    Swal.fire({
+        title: "Placing your order. Please confirm",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#0a673a",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Confirm"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "Order Placed Successfully",
+            text: "You will receive order confirmation",
+            icon: "success"
+          });
+        }
+      });
+}
 
