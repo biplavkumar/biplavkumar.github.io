@@ -123,9 +123,7 @@ function checkEmail() {
 // Placing Query:
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyoMQyIbepG5vMljxfNoFNRucDXPdIT0JvPpviHMpD0QMdfJtfI7THkWc92IrbAwdkL/exec';
-
 const formQuery = document.forms['contact-form'];
-
 formQuery.addEventListener('submit', e => {
     e.preventDefault();
     checkInputs();
@@ -136,17 +134,15 @@ formQuery.addEventListener('submit', e => {
         !mess.classList.contains("error")) {
         console.log("OK");
 
-        // Adding Query data to Google doc 
-        console.log("Trying to send QUERY data");
-
         fetch(scriptURL, { method: 'POST', body: new FormData(formQuery) })
             .then(response => "SUCCESS")
             .then(() => { window.location.reload(); })
             .catch(error => console.error('Error!', error.message))
 
+        // Adding Query data to Google doc 
+        console.log("Sent QUERY data to database");
 
         sendEmail();
-
         formQuery.reset();
         return false;
     }
