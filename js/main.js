@@ -1,38 +1,37 @@
 // active navbar
-let nav=document.querySelector(".navigation-wrap");
-window.onscroll = function (){
-    if(document.documentElement.scrollTop > 20){
+let nav = document.querySelector(".navigation-wrap");
+window.onscroll = function () {
+    if (document.documentElement.scrollTop > 20) {
         nav.classList.add("scroll-on");
-    }else{
+    } else {
         nav.classList.remove("scroll-on");
     }
-
 }
 
 // nav hide
 let navbar = document.querySelectorAll('.nav-link');
 let navCollapse = document.querySelector('.navbar-collapse.collapse');
-navbar.forEach(function(a){
-    a.addEventListener("click", function(){
+navbar.forEach(function (a) {
+    a.addEventListener("click", function () {
         navCollapse.classList.remove("show");
     })
 })
 
 // counter design
 document.addEventListener("DOMContentLoaded", () => {
-    function counter(id, start, end, duration){
-        let obj = document.getElementById(id), 
-        current = start,
-        range = end - start,
-        increment = end > start ? 1 : -1,
-        step = Math.abs(Math.floor(duration / range)),
-        timer = setInterval(() => {
-            current += increment;
-            obj.textContent = current;
-            if(current == end){
-                clearInterval(timer);
-            }
-        }, step);
+    function counter(id, start, end, duration) {
+        let obj = document.getElementById(id),
+            current = start,
+            range = end - start,
+            increment = end > start ? 1 : -1,
+            step = Math.abs(Math.floor(duration / range)),
+            timer = setInterval(() => {
+                current += increment;
+                obj.textContent = current;
+                if (current == end) {
+                    clearInterval(timer);
+                }
+            }, step);
     }
     counter("count1", 0, 12, 3000);
     counter("count2", 30, 100, 20);
@@ -51,36 +50,36 @@ const mess = document.getElementById("message");
 
 function sendEmail() {
     Email.send({
-        Host : "smtp.mailendo.com",
-        Username : "username",
-        Password : "password",
-        To : 'them@website.com',
-        From : "you@isp.com",
-        Subject : "This is the subject",
-        Body : "And this is the body"
+        Host: "smtp.mailendo.com",
+        Username: "username",
+        Password: "password",
+        To: 'them@website.com',
+        From: "you@isp.com",
+        Subject: "This is the subject",
+        Body: "And this is the body"
     }).then(
-      message => {
-        Swal.fire({
-            title: "Message Sent !",
-            text: "We will reach back to you in 2-3 business days",
-            icon: "success",
-            confirmButtonColor: '#0a673a',
-            timer: 4000
-          });
-      }
+        message => {
+            Swal.fire({
+                title: "Message Sent !",
+                text: "We will reach back to you in 2-3 business days",
+                icon: "success",
+                confirmButtonColor: '#0a673a',
+                timer: 4000
+            });
+        }
     );
 }
 
 function checkInputs() {
     const items = document.querySelectorAll(".item");
 
-    for (const item of items){
-        if (item.value == ""){
+    for (const item of items) {
+        if (item.value == "") {
             item.classList.add("error");
             item.parentElement.classList.add("error");
         }
 
-        if(items[1].value != ""){
+        if (items[1].value != "") {
             checkEmail();
         }
 
@@ -89,10 +88,10 @@ function checkInputs() {
         })
 
         item.addEventListener("keyup", () => {
-            if(item.value != ""){
+            if (item.value != "") {
                 item.classList.remove("error");
                 item.parentElement.classList.remove("error");
-            }else {
+            } else {
                 item.classList.add("error");
                 item.parentElement.classList.add("error");
             }
@@ -101,14 +100,14 @@ function checkInputs() {
 }
 
 function checkEmail() {
-    const emailRegex =  /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
+    const emailRegex = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
     const errorTextEmail = document.querySelector(".error-text.email")
 
-    if (!email.value.match(emailRegex)){
+    if (!email.value.match(emailRegex)) {
         email.classList.add("error");
         email.parentElement.classList.add("error");
 
-        if (email.value != ""){
+        if (email.value != "") {
             errorTextEmail.innerText = "Enter a valid email address";
         } else {
             errorTextEmail.innerText = "Email Address can't be blank";
@@ -131,25 +130,25 @@ formQuery.addEventListener('submit', e => {
     e.preventDefault();
     checkInputs();
 
-// Code for prompt: 
-    if(!fullName.classList.contains("error") && !email.classList.contains("error") &&  
-    !phone.classList.contains("error") && !subject.classList.contains("error") && 
-    !mess.classList.contains("error")){
-    console.log("OK");
+    // Code for prompt: 
+    if (!fullName.classList.contains("error") && !email.classList.contains("error") &&
+        !phone.classList.contains("error") && !subject.classList.contains("error") &&
+        !mess.classList.contains("error")) {
+        console.log("OK");
 
-     // Adding Query data to Google doc 
-     console.log("Trying to send QUERY data");
-     
-     fetch(scriptURL, { method: 'POST', body: new FormData(formQuery)})
-     .then(response => "SUCCESS")
-     .then(() => { window.location.reload(); })
-     .catch(error => console.error('Error!', error.message))
+        // Adding Query data to Google doc 
+        console.log("Trying to send QUERY data");
 
-     
-    sendEmail();
+        fetch(scriptURL, { method: 'POST', body: new FormData(formQuery) })
+            .then(response => "SUCCESS")
+            .then(() => { window.location.reload(); })
+            .catch(error => console.error('Error!', error.message))
 
-    form.reset();
-    return false;
+
+        sendEmail();
+
+        formQuery.reset();
+        return false;
     }
 })
 
@@ -160,31 +159,28 @@ const orderQuery = document.forms['order-form'];
 const scriptURLOrder = 'https://script.google.com/macros/s/AKfycbyoMQyIbepG5vMljxfNoFNRucDXPdIT0JvPpviHMpD0QMdfJtfI7THkWc92IrbAwdkL/exec';
 
 orderQuery.addEventListener("submit", e => {
-//checkInputs();
-console.log("INITIATING ORDER PLACEMENT ....")
+    //checkInputs();
+    console.log("INITIATING ORDER PLACEMENT ....")
 
-// Code for prompt: 
-    if(!fullName.classList.contains("error") && !email.classList.contains("error") &&  
-    !phone.classList.contains("error") && !subject.classList.contains("error") && 
-    !mess.classList.contains("error")){
-    console.log("OK");
+    // Code for prompt: 
+    if (!fullName.classList.contains("error") && !email.classList.contains("error") &&
+        !phone.classList.contains("error") && !subject.classList.contains("error") &&
+        !mess.classList.contains("error")) {
+        console.log("OK");
 
-     // Adding Query data to Google doc 
-     console.log("Trying to send ORDER data");
-    
-    
-     e.preventDefault()
-     
-     fetch(scriptURLOrder, { method: 'POST', body: new FormData(orderQuery)})
-     .then(response => "SUCCESS")
-     .then(() => {  })
-     .catch(error => console.error('Error!', error.message))
+        // Adding Query data to Google doc 
+        console.log("Trying to send ORDER data");
 
-     
-     placeOrder();
+        e.preventDefault()
 
-     //orderForm.reset();
-    return false;
+        fetch(scriptURLOrder, { method: 'POST', body: new FormData(orderQuery) })
+            .then(response => "SUCCESS")
+            .then(() => { })
+            .catch(error => console.error('Error!', error.message))
+
+        placeOrder();
+        orderQuery.reset();
+        return false;
     }
 })
 
@@ -197,15 +193,15 @@ function placeOrder() {
         confirmButtonColor: "#0a673a",
         cancelButtonColor: "#d33",
         confirmButtonText: "Confirm"
-      }).then((result) => {
+    }).then((result) => {
         if (result.isConfirmed) {
-          Swal.fire({
-            title: "Order Placed Successfully",
-            text: "You will receive order confirmation",
-            icon: "success",
-            confirmButtonColor: '#0a673a',
-          });
+            Swal.fire({
+                title: "Order Placed Successfully",
+                text: "You will receive order confirmation",
+                icon: "success",
+                confirmButtonColor: '#0a673a',
+            });
         }
-      });
+    });
 }
 
