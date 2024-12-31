@@ -29,7 +29,7 @@ a:hover {
 }
 
 a:hover {
-    color: var(--primary-color) !important;
+    color: var(--hover-nav) !important;
 }
 
 ul,
@@ -51,6 +51,7 @@ ol {
     --parallax-color: #99af81;
     --wheat-color: rgb(241, 240, 231);
     --red-color: #f20707;
+    --hover-nav: #012414;
     --primary-font: 'Roboto', sans-serif;
     --secondary-font: 'Quicksand', sans-serif;
     ;
@@ -285,6 +286,7 @@ p {
 .counter-section p {
     color: var(--white-color);
     text-transform: uppercase;
+    text-align: center;
 }
 
 /* 
@@ -448,23 +450,18 @@ p {
 
 .parallex {
     width: 100%;
-    background: linear-gradient(rgba(11, 32, 3, 0.1), rgba(195, 215, 201, 0.9)), url(../Images/foxnut_click_pan_parallax.jpeg) no-repeat center;
+    background: linear-gradient(rgba(223, 242, 216, 0.9), rgba(195, 215, 201, 0.1)), url(../Images/foxnut_click_pan_parallax.jpeg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     background-position: 0 71.9125px;
     padding: 4.37rem 0;
 }
 
-/* .parallex .parallex-text{
-    
-} */
-
 .parallex h2{
     color: var(--primary-color);
     font-family: cursive;
-    background: white;
-    background-blend-mode: overlay;
-    border-radius: 90px;
+    font-size: 32px;
+    font-weight: 2500;
 }
 
 /* Form Control */

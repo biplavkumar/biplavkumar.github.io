@@ -28,17 +28,17 @@ document.addEventListener("DOMContentLoaded", () => {
         step = Math.abs(Math.floor(duration / range)),
         timer = setInterval(() => {
             current += increment;
-            //obj.textContent = current;
+            obj.textContent = current;
             if(current == end){
                 clearInterval(timer);
             }
         }, step);
     }
-    counter("count1", 0, 1287, 3000);
-    counter("count2", 300, 2287, 20);
-    counter("count3", 0, 287, 3900);
-    counter("count4", 0, 1, 30);
-})
+    counter("count1", 0, 12, 3000);
+    counter("count2", 30, 100, 20);
+    counter("count3", 0, 28, 3900);
+    counter("count4", 0, 3, 30);
+});
 
 // Logic for email sending using JS 
 const form = document.querySelector('form');
@@ -120,11 +120,14 @@ function checkEmail() {
 }
 
 
+
+// Placing Query:
+
 const scriptURL = 'https://script.google.com/macros/s/AKfycbyoMQyIbepG5vMljxfNoFNRucDXPdIT0JvPpviHMpD0QMdfJtfI7THkWc92IrbAwdkL/exec';
 
 const formQuery = document.forms['contact-form'];
 
-form.addEventListener("submit", e => {
+formQuery.addEventListener('submit', e => {
     e.preventDefault();
     checkInputs();
 
@@ -135,10 +138,7 @@ form.addEventListener("submit", e => {
     console.log("OK");
 
      // Adding Query data to Google doc 
-     console.log("Trying to send data");
-    
-    
-     e.preventDefault()
+     console.log("Trying to send QUERY data");
      
      fetch(scriptURL, { method: 'POST', body: new FormData(formQuery)})
      .then(response => "SUCCESS")
@@ -156,13 +156,12 @@ form.addEventListener("submit", e => {
 
 // Placing order
 
-const orderForm = document.getElementById("order");
 const orderQuery = document.forms['order-form'];
 const scriptURLOrder = 'https://script.google.com/macros/s/AKfycbyoMQyIbepG5vMljxfNoFNRucDXPdIT0JvPpviHMpD0QMdfJtfI7THkWc92IrbAwdkL/exec';
 
-
-orderForm.addEventListener("click", e => {
-checkInputs();
+orderQuery.addEventListener("submit", e => {
+//checkInputs();
+console.log("INITIATING ORDER PLACEMENT ....")
 
 // Code for prompt: 
     if(!fullName.classList.contains("error") && !email.classList.contains("error") &&  
